@@ -10,7 +10,9 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "seed": "prisma db seed"
+    "seed": "prisma db seed",
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && prisma db seed && react-router build"
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^6.7.0",
@@ -37,6 +39,7 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@vercel/react-router": "^1.1.0",
     "match-sorter": "^8.0.1",
     "prisma": "^6.7.0",
     "tailwindcss": "^4.1.4",

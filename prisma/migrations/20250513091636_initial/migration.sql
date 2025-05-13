@@ -1,13 +1,15 @@
 -- CreateTable
 CREATE TABLE "contact" (
-    "contactId" TEXT NOT NULL PRIMARY KEY,
+    "contactId" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
     "avatar" TEXT,
     "twitter" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "contact_pkey" PRIMARY KEY ("contactId")
 );
 
 -- CreateIndex
