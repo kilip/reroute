@@ -1,5 +1,4 @@
 import { PrismaClient } from "@orm/client";
-import { PrismaBetterSQLite3 } from "@prisma/adapter-better-sqlite3";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import invariant from "tiny-invariant";
 import { singleton } from "./singleton";
